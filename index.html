@@ -31,6 +31,7 @@
 <style>
   main {
     scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y proximity; */
     /* 需要把滚动条设置在直接父容器上，
     scroll-snap-type才能生效，
     默认是body上，现在使用了overflow:scroll滚动条在main上了
@@ -41,8 +42,11 @@
 
   section {
     width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
+    height: 80vh;
+    scroll-snap-align: center;
+    /* scroll-snap-align: start; 容器顶部和元素顶部对齐 */
+    /* scroll-snap-align: end; 容器底部和元素底部对齐 */
+
   }
 </style>
 
