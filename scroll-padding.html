@@ -5,22 +5,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>css-scrollsnap</title>
+  <title>scroll-padding</title>
 </head>
 <style>
   body {
-    margin: 0;
+    margin: 0
   }
 
-  iframe {
-    border: none;
-    width: 80%;
-    height: 80%;
+  h1 {
+    margin: 0;
   }
 
   section {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 20px;
@@ -38,30 +35,28 @@
 <style>
   main {
     scroll-snap-type: y mandatory;
-    /* scroll-snap-type: y proximity; */
-    /* 需要把滚动条设置在直接父容器上，
-    scroll-snap-type才能生效，
-    默认是body上，现在使用了overflow:scroll滚动条在main上了
-    */
     overflow-y: scroll;
     height: 100vh;
+    scroll-padding: 50px;
   }
 
   section {
     width: 100vw;
     height: 80vh;
-    scroll-snap-align: center;
-    /* scroll-snap-align: start; 容器顶部和元素顶部对齐 */
-    /* scroll-snap-align: end; 容器底部和元素底部对齐 */
+    scroll-snap-align: start;
+  }
 
+  h1 {
+    background: white;
+    height: 50px;
+    position: sticky;
+    top: 0;
   }
 </style>
 
 <body>
   <main>
-    <section>
-      <iframe src='/scroll-padding.html'></iframe>
-    </section>
+    <h1>scroll-padding</h1>
     <section>1</section>
     <section>2</section>
     <section>3</section>
